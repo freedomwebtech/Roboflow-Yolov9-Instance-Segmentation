@@ -9,7 +9,6 @@ from vidgear.gears import CamGear
 model = YOLO("best.pt")  # You might need to adjust the model path
 
 # Open webcam
-#cap = cv2.VideoCapture('p.mp4')
 stream = CamGear(source='https://youtu.be/HUK5JEc6heI', stream_mode = True, logging=True).start() # YouTube Video URL as input
 
 my_file = open("coco1.txt", "r")
@@ -17,7 +16,6 @@ data = my_file.read()
 class_list = data.split("\n")
 count=0
 while True:
-#    ret, frame = cap.read()
     frame = stream.read()
     
     count += 1
@@ -61,6 +59,5 @@ while True:
         break
 
 # Release video capture and close windows
-#cap.release()
 stream.stop()
 cv2.destroyAllWindows()

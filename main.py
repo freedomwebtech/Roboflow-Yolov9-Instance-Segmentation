@@ -3,7 +3,6 @@ import numpy as np
 from ultralytics import YOLO
 import pandas as pd
 import cvzone
-from vidgear.gears import CamGear
 # Load YOLOv8 segmentation model
 model = YOLO("yolov8n-seg.pt")  # You might need to adjust the model path
 

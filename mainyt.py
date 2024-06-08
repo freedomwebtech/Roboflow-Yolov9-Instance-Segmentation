@@ -9,7 +9,7 @@ from vidgear.gears import CamGear
 model = YOLO("best.pt")  # You might need to adjust the model path
 
 # Open webcam
-stream = CamGear(source='https://youtu.be/HUK5JEc6heI', stream_mode = True, logging=True).start() # YouTube Video URL as input
+stream = CamGear(source='https://youtu.be/HUK5JE', stream_mode = True, logging=True).start() # YouTube Video URL as input
 
 my_file = open("coco1.txt", "r")
 data = my_file.read()

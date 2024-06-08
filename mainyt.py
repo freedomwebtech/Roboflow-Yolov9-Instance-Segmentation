@@ -48,7 +48,7 @@ while True:
                mask = cv2.resize(mask.astype(np.uint8), (frame.shape[1], frame.shape[0]))
                mask_bgr = cv2.cvtColor(mask, cv2.COLOR_GRAY2BGR)
                contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-               cv2.fillPoly(mask_bgr, contours, (255, 0, 255))
+               cv2.fillPoly(mask_bgr, contours, (0, 0, 255))
                frame = cv2.addWeighted(frame, 1, mask_bgr, 0.5, 0)
     
     # Display frame

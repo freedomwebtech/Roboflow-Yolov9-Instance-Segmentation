@@ -52,7 +52,7 @@ while True:
                frame = cv2.addWeighted(frame, 1, mask_bgr, 0.5, 0)
     
     # Display frame
-    cv2.imshow("YOLOv8 Segmentation", frame)
+    cv2.imshow("YOLOv9 Segmentation", frame)
     
     # Break the loop if 'q' is pressed
     if cv2.waitKey(1) & 0xFF == ord('q'):
